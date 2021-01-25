@@ -6,7 +6,8 @@ const fs = require('fs');
 // }
 
 const requestHandler = (req, res) => {
-
+const url = req.url;
+const method = req.method;
 if (url === '/') {
     res.write('<html>');
     res.write('<head><title>Enter Message</title></head>');
@@ -45,4 +46,16 @@ if (url === '/') {
   res.end();
 };
 
-module.exports = requestHandler;
+// module.exports = requestHandler;
+
+// module.exports = {
+//   handler: requestHandler,
+//   someText: 'Some hard coded text'
+// };
+
+
+// module.exports.handler = requestHandler;
+// module.exports.someText = 'Some hard coded text';
+
+exports.handler = requestHandler;
+exports.someText = 'Some hard coded text';
