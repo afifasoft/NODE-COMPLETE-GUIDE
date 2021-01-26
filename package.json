@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/afifasoft/NODE-COMPLETE-GUIDE/issues"
   },
-  "homepage": "https://github.com/afifasoft/NODE-COMPLETE-GUIDE#readme"
+  "homepage": "https://github.com/afifasoft/NODE-COMPLETE-GUIDE#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
