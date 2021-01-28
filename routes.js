@@ -14,8 +14,8 @@ if (url === '/') {
     res.write('<body><form action="/message" method="POST"><input type="text" name="message"/><button type="submit">Send</button></form></body>');
     res.write('</html>');
     return res.end();
-  }
-
+ 
+}
   if (url === '/message' && method === 'POST') {
     const body = [];
     req.on('data', (chunk) => {
@@ -23,7 +23,8 @@ if (url === '/') {
       body.push(chunk);
     });
 
-    req.on('end', () => {
+
+    return req.on('end', () => {
       const parsedBody = Buffer.concat(body).toString();
       console.log(parsedBody);
       const message =  parsedBody.split('=')[1];
