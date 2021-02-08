@@ -10,7 +10,7 @@
             "name": "Launch Program",
             "program": "${workspaceFolder}/app.js",
             "restart": true,
-            "runtimeExecutable": "/usr/local/bin/nodemon",
+            "runtimeExecutable": "/usr/local/bin/node",
             "console": "integratedTerminal"
         }
     ]
